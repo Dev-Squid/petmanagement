@@ -1,0 +1,18 @@
+{
+    "python.pythonPath": "/Users/ing_r/.virtualenvs/petmanagement-frHX_XlO/Scripts",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MySQL",
+            "database": "petmanagement",
+            "username": "root"
+        }
+    ]
+}

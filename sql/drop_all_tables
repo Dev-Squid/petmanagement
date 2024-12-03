@@ -1,0 +1,13 @@
+USE petmanagement;
+
+-- Step 1: Generate DROP TABLE statements
+SET @tables = NULL;
+SELECT GROUP_CONCAT('`', table_name, '`') INTO @tables
+FROM information_schema.tables 
+WHERE table_schema = 'petmanagement';
+
+-- Step 2: Execute the generated DROP TABLE statements
+SET @tables = CONCAT('DROP TABLE IF EXISTS ', @tables);
+PREPARE stmt FROM @tables;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
